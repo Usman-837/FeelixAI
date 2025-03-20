@@ -15,7 +15,7 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
 
     const [isDarkMode, setIsDarkMode] = useState(false);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
     const toggleTheme = () => {
         setIsDarkMode((prevMode) => !prevMode);
@@ -35,7 +35,7 @@ const Sidebar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
 
     return (
         <>
-            <section className={`h-svh bg-[#FCFCFC] px-5 pt-4 pb-6 overflow-y-auto custom-scrollbar transition-all duration-500 ${isSidebarOpen ? 'w-[280px]' : 'w-[100px]'} max-sm:hidden max-sm:absolute max-sm:z-50 max-sm:top-[88px]`}>
+            <section className={`h-svh bg-[#FCFCFC] px-5 pt-4 pb-6 overflow-y-auto custom-scrollbar transition-all duration-500 ${isSidebarOpen ? 'w-[280px]' : 'w-[100px]'} max-md:hidden max-md:absolute max-md:z-50 max-md:top-[88px]`}>
                 <div className='flex flex-col justify-between h-full max-sm:h-auto'>
                     <div className='flex flex-col gap-y-12 max-sm:pb-5'>
                         <div className='flex items-center justify-center'>
@@ -95,9 +95,9 @@ const Sidebar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
             </section>
             {
                 isMobileSidebarOpen ? (
-                    <section className={`h-svh bg-[#FCFCFC] px-5 pt-4 pb-6 overflow-y-auto custom-scrollbar transition-all duration-500 ${isSidebarOpen ? 'w-[280px]' : 'w-[100px]'} sm:hidden max-sm:absolute max-sm:z-50 max-sm:top-[88px]`}>
-                        <div className='flex flex-col justify-between h-full max-sm:h-auto'>
-                            <div className='flex flex-col gap-y-12 max-sm:pb-5'>
+                    <section className={`h-svh bg-[#FCFCFC] px-5 pt-4 pb-6 overflow-y-auto custom-scrollbar transition-all duration-500 ${isSidebarOpen ? 'w-[280px]' : 'w-[100px]'} md:hidden max-md:absolute max-md:z-50 max-md:top-[88px]`}>
+                        <div className='flex flex-col justify-between h-full max-md:h-auto'>
+                            <div className='flex flex-col gap-y-12 max-md:pb-5'>
                                 <div className='flex items-center justify-center'>
                                     <img src={logo} alt='logo' />
                                 </div>

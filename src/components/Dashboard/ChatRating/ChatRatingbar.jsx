@@ -7,30 +7,33 @@ const ChatRatingbar = () => {
       type: "bar",
       height: 200,
       toolbar: {
-        show: false, // Removes the download and other toolbar buttons
+        show: false, 
       },
     },
     plotOptions: {
       bar: {
         horizontal: true,
-        borderRadius: 10, // Rounded bars
-        distributed: true, // Different colors for each bar
+        borderRadius: 10, 
+        distributed: true, 
       },
     },
     colors: ["#00B81D", "#B43A45", "#16C5F4", "#165DFF", "#D96D00"],
     dataLabels: {
       style: {
-        colors: ["#fff"], // White text for readability
+        colors: ["#fff"],
       },
     },
     xaxis: {
-        labels: { show: true },
-        axisBorder: { show: false }, 
-        axisTicks: { show: false },
-      },
-      grid: {
-        show: false,
-      },
+      labels: { show: true },
+      axisBorder: { show: false },
+      axisTicks: { show: false },
+    },
+    grid: {
+      show: false,
+    },
+    legend: {
+      show: false, 
+    },
   };
 
   const series = [
@@ -48,7 +51,7 @@ const ChatRatingbar = () => {
 
   return (
     <div id="chart">
-      <Chart options={options} series={series} type="bar" height={250} />
+      <Chart options={options} series={series} type="bar" height={200} />
     </div>
   );
 };

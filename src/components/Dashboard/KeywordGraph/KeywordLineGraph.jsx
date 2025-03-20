@@ -21,20 +21,20 @@ const data = [
   { name: '10', uv: 1800, pv: 6300, amt: 2200 },
 ];
 
-const ResolvedQueriesLineChart = () => {
+const KeywordLineGraph = () => {
   return (
     <div className="w-full max-w-screen-md mx-auto">
-      <ResponsiveContainer width="100%" height={window.innerWidth < 768 ? 200 : 250}>
-        <LineChart data={data} margin={{ top: 30, right: 10, left: -10, bottom: 10 }}>
+      <ResponsiveContainer width="100%" height={window.innerWidth < 768 ? 200 : 200}>
+        <LineChart data={data} margin={{ top: 30, right: 0, left: -10, bottom: 0 }}>
           <XAxis
             dataKey="name"
             stroke="#86909C"
             padding={{ left: 20, right: 20 }}
-            tick={{ fontSize: window.innerWidth < 768 ? 12 : 12 }}
+            tick={{ fontSize: 12, fill: '#86909C' }} // ✅ Text color + size
           />
           <YAxis
             stroke="#86909C"
-            tick={{ fontSize: window.innerWidth < 768 ? 12 : 12 }}
+            tick={{ fontSize: 12, fill: '#86909C' }} // ✅ Text color + size
           />
           <Tooltip />
           <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} dot={false} />
@@ -45,4 +45,4 @@ const ResolvedQueriesLineChart = () => {
   );
 };
 
-export default ResolvedQueriesLineChart;
+export default KeywordLineGraph;

@@ -21,11 +21,11 @@ const data = [
   { name: '10', uv: 1800, pv: 6300, amt: 2200 },
 ];
 
-const ResolvedQueriesLineChart = () => {
+const TimeQueriesGraph = () => {
   return (
     <div className="w-full max-w-screen-md mx-auto">
-      <ResponsiveContainer width="100%" height={window.innerWidth < 768 ? 200 : 250}>
-        <LineChart data={data} margin={{ top: 30, right: 10, left: -10, bottom: 10 }}>
+      <ResponsiveContainer width="100%" height={window.innerWidth < 768 ? 200 : 200}>
+        <LineChart data={data} margin={{ top: 30, right: 0, left: -10, bottom: 0 }}>
           <XAxis
             dataKey="name"
             stroke="#86909C"
@@ -37,12 +37,12 @@ const ResolvedQueriesLineChart = () => {
             tick={{ fontSize: window.innerWidth < 768 ? 12 : 12 }}
           />
           <Tooltip />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="pv" stroke="#FFA800" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="uv" stroke="#AF1073" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 };
 
-export default ResolvedQueriesLineChart;
+export default TimeQueriesGraph;
