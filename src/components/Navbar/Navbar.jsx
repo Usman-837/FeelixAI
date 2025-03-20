@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa"
 
 const Navbar = ({ toggleMobileSidebar }) => {
     return (
-        <nav className='bg-[#FCFCFC] flex items-center justify-between border-l-[1px] border-[#CFD3D8] py-6 px-10 max-sm:px-5 fixed z-50 w-[calc(100%-250px)] max-md:w-full'>
+        <nav className='bg-[#FCFCFC] flex items-center justify-between border-l-[1px] border-[#CFD3D8] py-6 px-10 max-sm:px-5 w-full'>
             <div className='flex items-center max-sm:gap-x-4 gap-x-5'>
                 <FaBars className='md:hidden text-xl text-[#3BC1C5]' onClick={toggleMobileSidebar} />
                 <h1 className='text-[#0A090B] text-2xl font-semibold'>Dashboard</h1>
