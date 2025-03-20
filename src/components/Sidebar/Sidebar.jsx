@@ -43,24 +43,32 @@ const Sidebar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
                         </div>
                         <ul className='space-y-2'>
                             {SidebarMenu.map((data) => (
-                                <NavLink to={data.path} key={data.id} className='text-[#6F767E] text-[15px] font-medium flex items-center gap-x-3 p-3 hover:bg-[#3BC1C5] hover:text-white rounded-xl'>
+                                <NavLink
+                                    to={data.path}
+                                    key={data.id}
+                                    className={({ isActive }) =>
+                                        `text-[#6F767E] text-[15px] font-medium flex items-center gap-x-3 p-3 rounded-xl transition-all duration-300 
+                                        ${isActive ? 'bg-[#3BC1C5] text-white' : 'hover:bg-[#3BC1C5] hover:text-white'}`
+                                    }
+                                >
                                     {data.icon} {isSidebarOpen && data.title}
                                 </NavLink>
                             ))}
                         </ul>
+
                     </div>
                     <div>
                         <div className='flex justify-end border-b-2 border-[#F4F4F4] pb-4'>
                             {isSidebarOpen ? (
-                                <FaAnglesLeft className='w-6 h-6 text-[#6F767E] cursor-pointer' onClick={toggleSidebar} />
+                                <FaAnglesLeft className='w-6 h-6 text-[#6F767E] cursor-pointer hover:text-[#3BC1C5]' onClick={toggleSidebar} />
                             ) : (
-                                <FaAnglesRight className='w-6 h-6 text-[#6F767E] cursor-pointer' onClick={toggleSidebar} />
+                                <FaAnglesRight className='w-6 h-6 text-[#6F767E] cursor-pointer hover:text-[#3BC1C5]' onClick={toggleSidebar} />
                             )}
                         </div>
                         <div className='space-y-4 pt-4'>
                             <div className='p-3 flex items-center gap-x-3'>
-                                <IoIosHelpCircleOutline className='w-6 h-6 text-[#6F767E]' />
-                                {isSidebarOpen && <p className='text-[#6F767E] text-[15px] font-semibold'>Help</p>}
+                                <IoIosHelpCircleOutline className='w-6 h-6 text-[#6F767E] hover:text-[#3BC1C5]' />
+                                {isSidebarOpen && <p className='text-[#6F767E] text-[15px] font-semibold hover:text-[#3BC1C5]'>Help</p>}
                             </div>
                             <div className='flex items-center p-1 rounded-[40px] cursor-pointer bg-[#F4F4F4]'>
                                 {isSidebarOpen ? (
@@ -103,24 +111,33 @@ const Sidebar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
                                 </div>
                                 <ul className='space-y-2'>
                                     {SidebarMenu.map((data) => (
-                                        <NavLink to={data.path} key={data.id} className='text-[#6F767E] text-[15px] font-medium flex items-center gap-x-3 p-3 hover:bg-[#3BC1C5] hover:text-white rounded-xl' onClick={toggleMobileSidebar}>
+                                        <NavLink
+                                            to={data.path}
+                                            key={data.id}
+                                            onClick={toggleMobileSidebar}
+                                            className={({ isActive }) =>
+                                                `text-[#6F767E] text-[15px] font-medium flex items-center gap-x-3 p-3 rounded-xl transition-all duration-300 
+                                                ${isActive ? 'bg-[#3BC1C5] text-white' : 'hover:bg-[#3BC1C5] hover:text-white'}`
+                                            }
+                                        >
                                             {data.icon} {isSidebarOpen && data.title}
                                         </NavLink>
                                     ))}
                                 </ul>
+
                             </div>
                             <div>
                                 <div className='flex justify-end border-b-2 border-[#F4F4F4] pb-4'>
                                     {isSidebarOpen ? (
-                                        <FaAnglesLeft className='w-6 h-6 text-[#6F767E] cursor-pointer' onClick={toggleSidebar} />
+                                        <FaAnglesLeft className='w-6 h-6 text-[#6F767E] cursor-pointer hover:text-[#3BC1C5]' onClick={toggleSidebar} />
                                     ) : (
-                                        <FaAnglesRight className='w-6 h-6 text-[#6F767E] cursor-pointer' onClick={toggleSidebar} />
+                                        <FaAnglesRight className='w-6 h-6 text-[#6F767E] cursor-pointer hover:text-[#3BC1C5]' onClick={toggleSidebar} />
                                     )}
                                 </div>
                                 <div className='space-y-4 pt-4'>
                                     <div className='p-3 flex items-center gap-x-3'>
-                                        <IoIosHelpCircleOutline className='w-6 h-6 text-[#6F767E]' />
-                                        {isSidebarOpen && <p className='text-[#6F767E] text-[15px] font-semibold'>Help</p>}
+                                        <IoIosHelpCircleOutline className='w-6 h-6 text-[#6F767E] hover:text-[#3BC1C5]' />
+                                        {isSidebarOpen && <p className='text-[#6F767E] text-[15px] font-semibold hover:text-[#3BC1C5]'>Help</p>}
                                     </div>
                                     <div className='flex items-center p-1 rounded-[40px] cursor-pointer bg-[#F4F4F4]'>
                                         {isSidebarOpen ? (

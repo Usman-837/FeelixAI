@@ -17,7 +17,7 @@ const Dashboard = () => {
   return (
     <section className="p-5 flex flex-col gap-5 overflow-auto custom-scrollbar h-[calc(100vh-50px)] pt-28">
       <div className="flex items-center max-sm:flex-col max-sm:gap-4 justify-between">
-        <div className="flex gap-4 max-sm:gap-2 max-smallmobile:grid max-smalllaptop:grid-cols-2">
+        <div className="max-sm:w-full flex gap-4 max-sm:gap-2 max-sm:justify-center max-smallmobile:grid max-smalllaptop:grid-cols-2">
           <SelectTime />
           <SelectChat />
           <SelectNeutral />

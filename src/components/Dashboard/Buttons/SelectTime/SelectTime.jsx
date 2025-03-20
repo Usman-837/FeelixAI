@@ -29,7 +29,7 @@ const SelectTime = () => {
             {/* Dropdown Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex gap-x-2.5 items-center border border-[#CFD3D8] outline-none py-2 px-3 rounded-2xl text-sm text-[#220B35]"
+                className="w-full flex gap-x-2.5 items-center max-smallmobile:justify-between border border-[#CFD3D8] outline-none py-2 px-3 rounded-2xl text-sm text-[#220B35] hover:bg-[#3BC1C5] hover:text-white"
             >
                 <span>{selectedOption}</span>
                 <MdOutlineKeyboardArrowDown
@@ -44,7 +44,7 @@ const SelectTime = () => {
                         {["All Time", "7 Days", "30 Days", "Year"].map((option) => (
                             <li
                                 key={option}
-                                className="px-4 py-2 flex items-center gap-2 hover:bg-gray-100 cursor-pointer"
+                                className="px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-[#3BC1C5] hover:text-white"
                                 onClick={() => handleSelect(option)}
                             >
                                 {option}

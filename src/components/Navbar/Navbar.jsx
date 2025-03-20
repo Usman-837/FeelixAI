@@ -17,7 +17,7 @@ const Navbar = ({ toggleMobileSidebar }) => {
                             type="text"
                             placeholder="Search..."
                             id="searchInput"
-                            className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white outline-none transition-all border-[1px] border-[#CFD3D8] rounded-lg"
+                            className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white outline-none transition-all border-[1px] border-[#CFD3D8] rounded-lg focus:border-[#3BC1C5]"
                         />
                         <div className="absolute inset-y-0 left-0 flex items-center pl-3">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-400 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -30,6 +30,7 @@ const Navbar = ({ toggleMobileSidebar }) => {
                         <RxCross2 className='w-2' />
                     </div>
                 </div>
+
                 <div className='flex items-center gap-x-6 max-sm:gap-x-4'>
                     <div className="relative p-2 rounded-lg">
                         <svg className="w-6 h-6 text-[#6F767E] animate-wiggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">

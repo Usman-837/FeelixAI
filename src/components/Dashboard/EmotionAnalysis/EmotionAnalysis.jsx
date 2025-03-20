@@ -57,9 +57,9 @@ const EmotionAnalysis = () => {
                             TableData.map((data) => {
                                 return (
                                     <tr key={data.id}>
-                                        <td className='border-[1px] border-[#CFD3D8] py-1.5 px-2 text-sm text-[#1D2129]'>{data.chat}</td>
-                                        <td className='border-[1px] border-[#CFD3D8] py-1.5 px-2 text-sm text-[#1D2129'>{data.neutral}</td>
-                                        <td className='border-[1px] border-[#CFD3D8] py-1.5 px-2 text-sm text-[#1D2129'>{data.des}</td>
+                                        <td className='border-[1px] border-[#CFD3D8] py-1.5 px-2 text-sm max-smallmobile:text-xs text-[#1D2129]'>{data.chat}</td>
+                                        <td className='border-[1px] border-[#CFD3D8] py-1.5 px-2 text-sm max-smallmobile:text-xs text-[#1D2129'>{data.neutral}</td>
+                                        <td className='border-[1px] border-[#CFD3D8] py-1.5 px-2 text-sm max-smallmobile:text-xs text-[#1D2129'>{data.des}</td>
                                     </tr>
                                 )
                             })

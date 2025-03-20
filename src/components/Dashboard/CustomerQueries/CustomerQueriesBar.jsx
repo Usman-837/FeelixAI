@@ -20,26 +20,26 @@ const CustomerQueriesBar = () => {
         colors: ["#656EF8", "#656EF8", "#656EF8", "#656EF8", "#656EF8"],
         dataLabels: {
             style: {
-                colors: ["#86909C"],  // ✅ Set data label text color
-                fontSize: "12px",     // ✅ Set text size
+                colors: ["white"],
+                fontSize: "12px",
             },
         },
         xaxis: {
-            labels: { 
+            labels: {
                 show: true,
-                style: { 
-                    colors: "#86909C", // ✅ X-axis text color
-                    fontSize: "12px",   // ✅ X-axis text size
+                style: {
+                    colors: "#86909C",
+                    fontSize: "12px",
                 },
             },
             axisBorder: { show: false },
             axisTicks: { show: false },
         },
         yaxis: {
-            labels: { 
-                style: { 
-                    colors: "#86909C", // ✅ Y-axis text color
-                    fontSize: "12px",   // ✅ Y-axis text size
+            labels: {
+                style: {
+                    colors: "#86909C",
+                    fontSize: "12px",
                 },
             },
         },
@@ -47,7 +47,7 @@ const CustomerQueriesBar = () => {
             show: false,
         },
         legend: {
-            show: false, 
+            show: false,
         },
     };
 

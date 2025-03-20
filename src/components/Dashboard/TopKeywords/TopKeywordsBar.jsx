@@ -24,9 +24,24 @@ const TopKeywordsBar = () => {
             },
         },
         xaxis: {
-            labels: { show: true },
+            labels: {
+                show: true,
+                style: {
+                    colors: "#86909C",  // Set x-axis label color
+                    fontSize: "12px",
+                },
+            },
             axisBorder: { show: false },
             axisTicks: { show: false },
+        },
+        yaxis: {
+            labels: {
+                show: true,
+                style: {
+                    colors: "#86909C",  // Set y-axis label color
+                    fontSize: "12px",
+                },
+            },
         },
         grid: {
             show: false,
